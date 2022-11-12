@@ -1,0 +1,23 @@
+/* css module chỉ dùng cho classs */
+/* thêm npm install --save clsx (--save có thể để trước hoặc sau, hoặc không để sẽ mặc định
+--save --save-dev: lưu bào package của project hiện tại, lưu vào thư mục dependencies của package
+Nhưng --save-dev : nhưng package chỉ dùng cho quá trình code sau khi code có thể gỡ ra, sẽ nằm trong thư mục devDependencies
+--g: lưu vào global, lưu vào trên ổ C máy tính */
+.tittle{
+    font-size: 30px;
+    font-weight: normal;
+    font-style: italic;
+}
+.btn{
+    background-color: green;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+}
+.btn1{
+    box-shadow: 3px 3px 5px black;
+}
+
+.btn2{
+    font-size: 50px;
+}

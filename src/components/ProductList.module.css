@@ -1,0 +1,9 @@
+.row{
+    display: flex;
+    padding: 20px 0;
+}
+.col{
+    width: calc(100%/3);
+    box-sizing: border-box;
+    padding: 0 15px;
+}
