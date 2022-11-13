@@ -204,7 +204,7 @@ export default class ProductList extends Component {
         const foundItem = cloneCart.find((item) => id === item.product.id);
 
         if (foundItem && foundItem.quantity > 1) {
-            foundItem.quantity -= 1;
+            foundItem.quantity += 1;
         };
 
         this.setState({
@@ -217,7 +217,7 @@ export default class ProductList extends Component {
         const foundItem = cloneCart.find((item) => id === item.product.id);
 
         if (foundItem) {
-            foundItem.quantity += 1;
+            foundItem.quantity -= 1;
         };
 
         this.setState({
@@ -238,12 +238,13 @@ export default class ProductList extends Component {
                 {/* đặt tên tùy ý, vd: detail */}
                 {this.state.selectedItem ? <ProductDetail detail={this.state.selectedItem} /> : null}
                 {/* đúng thì hiện cart, sai thì không hiện */}
-                {this.state.isShowCart && <Cart                
+                {this.state.isShowCart && (<Cart                
                 hideCart={this.hideCart} 
                 cartList={this.state.cart} 
                 deleteCartItem={this.deleteCartItem}
                 increaseQuantity={this.increaseQuantity}
-                decreaseQuantity={this.decreaseQuantity} />}
+                decreaseQuantity={this.decreaseQuantity} />
+                )}
             </div>
         );
     }
